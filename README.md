@@ -1,4 +1,5 @@
-# mkdocs-submodule-edit-uri
+# mkdocs-submodule-edit-uri (separator hack)
+### This branch replaces '-' with ' ' in the replacement URL, which is required for a project of mine specifically
 [![Build Status](https://img.shields.io/github/workflow/status/sondregronas/mkdocs-submodule-edit-uri/CI)](https://github.com/sondregronas/mkdocs-submodule-edit-uri/)
 [![GitHub latest commit](https://img.shields.io/github/last-commit/sondregronas/mkdocs-submodule-edit-uri)](https://github.com/sondregronas/mkdocs-submodule-edit-uri/commit/)
 [![PyPi](https://img.shields.io/pypi/v/mkdocs-submodule-edit-uri)](https://pypi.org/project/mkdocs-submodule-edit-uri/)

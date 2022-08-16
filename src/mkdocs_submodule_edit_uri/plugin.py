@@ -15,5 +15,7 @@ class SubmoduleEditUriPlugin(BasePlugin):
 
     def on_post_page(self, output, page, config):
         for v in self.config['tuples']:
-            output = output.replace(v['old'], v['new'])
+            old = v['old'][:-len(v['old'].split('/')[-1])] + page.url[:-1]
+            new = v['new']+page.url[len(page.url.split('/')[0]):].replace('-', '%20')[:-1]
+            output = output.replace(old, new)
         return output

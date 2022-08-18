@@ -4,7 +4,6 @@
 [![PyPi](https://img.shields.io/pypi/v/mkdocs-submodule-edit-uri)](https://pypi.org/project/mkdocs-submodule-edit-uri/)
 [![AGPLv3 license](https://img.shields.io/github/license/sondregronas/mkdocs-submodule-edit-uri)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 [![codecov](https://codecov.io/gh/sondregronas/mkdocs-submodule-edit-uri/branch/main/graph/badge.svg?token=N5IDI7Q4NZ)](https://codecov.io/gh/sondregronas/mkdocs-submodule-edit-uri)
-[![Buymeacoffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://www.buymeacoffee.com/u92RMis)
 
 A super simple plugin to convert the edit_uri to match in GitHub submodules, allowing you to store parts of your docs on different repositories
 

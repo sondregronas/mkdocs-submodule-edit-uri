@@ -1,3 +1,5 @@
+import urllib.parse
+
 from mkdocs.plugins import BasePlugin
 from mkdocs.config import config_options
 
@@ -17,8 +19,7 @@ class SubmoduleEditUriPlugin(BasePlugin):
         separator = '-'
         for v in self.config['tuples']:
             p = page.url[len(v['old'].split('/')[-1]):-1]
-            p = p.replace('%20', ' ')
-            p = p.replace('%2C', ',')
+            p = urllib.parse.unquote(p)
             old = v['old'] + p
 
             p = page.url[len(page.url.split('/')[0]):-1]

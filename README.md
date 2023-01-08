@@ -20,12 +20,18 @@ plugins:
   - search
   - submodule-edit-uri:
       modules:
-      - test:
+      - sub1:
           old: https://github.com/user/repo/edit/main/docs/SUBMODULE
           new: https://github.com/user/repo-SUBMODULE/edit/main
-      - whatever-name-doesntmatter:
+      - sub1-view:
+          old: https://github.com/user/repo/raw/main/docs/SUBMODULE
+          new: https://github.com/user/repo-SUBMODULE/raw/main
+      - sub2-namedoesntmatter:
           old: https://github.com/user/repo/edit/main/docs/SUBMODULE2
           new: https://github.com/user/repo-SUBMODULE2/edit/main
+      - sub2-namedoesntmatter-view:
+          old: https://github.com/user/repo/raw/main/docs/SUBMODULE2
+          new: https://github.com/user/repo-SUBMODULE2/raw/main
 ```
 > **Note:** If you have no `plugins` entry in your config file yet, you'll likely also want to add the `search` plugin. MkDocs enables it by default if there is no `plugins` entry set, but now you have to enable it explicitly.
 

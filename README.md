@@ -1,11 +1,11 @@
-# mkdocs-submodule-edit-uri (separator hack)
-### This branch replaces '-' with ' ' in the replacement URL, which is required for a project of mine specifically
-[![Build Status](https://img.shields.io/github/workflow/status/sondregronas/mkdocs-submodule-edit-uri/CI)](https://github.com/sondregronas/mkdocs-submodule-edit-uri/)
+# mkdocs-submodule-edit-uri
+### This branch replaces '-' with ' ' in the replacement URL
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/sondregronas/mkdocs-submodule-edit-uri/CI.yml?branch=main)](https://github.com/sondregronas/mkdocs-submodule-edit-uri/)
 [![GitHub latest commit](https://img.shields.io/github/last-commit/sondregronas/mkdocs-submodule-edit-uri)](https://github.com/sondregronas/mkdocs-submodule-edit-uri/commit/)
 [![PyPi](https://img.shields.io/pypi/v/mkdocs-submodule-edit-uri)](https://pypi.org/project/mkdocs-submodule-edit-uri/)
 [![AGPLv3 license](https://img.shields.io/github/license/sondregronas/mkdocs-submodule-edit-uri)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 [![codecov](https://codecov.io/gh/sondregronas/mkdocs-submodule-edit-uri/branch/main/graph/badge.svg?token=N5IDI7Q4NZ)](https://codecov.io/gh/sondregronas/mkdocs-submodule-edit-uri)
-[![Buymeacoffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://www.buymeacoffee.com/u92RMis)
 
 A super simple plugin to convert the edit_uri to match in GitHub submodules, allowing you to store parts of your docs on different repositories
 
@@ -22,12 +22,18 @@ plugins:
   - search
   - submodule-edit-uri:
       modules:
-      - test:
+      - sub1:
           old: https://github.com/user/repo/edit/main/docs/SUBMODULE
           new: https://github.com/user/repo-SUBMODULE/edit/main
-      - whatever-name-doesntmatter:
+      - sub1-view:
+          old: https://github.com/user/repo/raw/main/docs/SUBMODULE
+          new: https://github.com/user/repo-SUBMODULE/raw/main
+      - sub2-namedoesntmatter:
           old: https://github.com/user/repo/edit/main/docs/SUBMODULE2
           new: https://github.com/user/repo-SUBMODULE2/edit/main
+      - sub2-namedoesntmatter-view:
+          old: https://github.com/user/repo/raw/main/docs/SUBMODULE2
+          new: https://github.com/user/repo-SUBMODULE2/raw/main
 ```
 > **Note:** If you have no `plugins` entry in your config file yet, you'll likely also want to add the `search` plugin. MkDocs enables it by default if there is no `plugins` entry set, but now you have to enable it explicitly.
 

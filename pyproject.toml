@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mkdocs-submodule-edit-uri"
-version = "1.0.2"
+version = "1.0.3"
 keywords = ["mkdocs", "markdown", "submodules", "github", "edit_uri"]
 description = "A plugin to convert the edit_uri for GitHub submodules"
 readme = "README.md"
@@ -22,12 +22,14 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Documentation",
     "Topic :: Software Development :: Documentation"
 ]
 
 dependencies = [
-    "mkdocs>=1"
+    "mkdocs>=1",
+    "setuptools"
 ]
 
 [project.urls]
